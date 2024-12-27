@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_package = "web.pb";
+option java_multiple_files = true;
+
+service StorehouseService {
+  rpc GetMerchAvailability(StorehouseRequest) returns (StorehouseResponse) {}
+  rpc addNewMerch(ProviderRequest) returns (ProviderResponse) {}
+}
+
+message StorehouseRequest {
+  int64 id = 1;
+}
+
+message StorehouseResponse {
+  bool isHas = 1;
+}
+
+message ProviderRequest {
+  string name = 1;
+  int64 count = 2;
+}
+
+message ProviderResponse {
+  int64 id = 1;
+}
