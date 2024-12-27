@@ -11,7 +11,7 @@ import web.dto.ResponseDto;
 @RestController
 @RequestMapping("/provider")
 @RequiredArgsConstructor
-public class OrderController {
+public class ProviderController {
 
     private final StorehouseService storehouseService;
 
